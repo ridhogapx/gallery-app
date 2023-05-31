@@ -33,9 +33,7 @@ function App() {
      <ExtraMenu styleMenu={styleMenu} styleLink={styleLink}/>
      {/* Main content */}
      {visibilityContent &&
-     <div>
         <Concept />
-     </div>
      }
      
     </div>
