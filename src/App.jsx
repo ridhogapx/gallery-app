@@ -4,6 +4,7 @@ import ExtraMenu from "./components/ExtraMenu"
 import Concept from "./components/Concept"
 import Ilustration from "./components/Ilustration"
 import Personal from "./components/Personal"
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Concept />
           <Ilustration />
           <Personal />
+          <Footer />
         </>
      }
      
