@@ -7,7 +7,7 @@ import five from "../assets/concept/5.jpg"
 
 const Concept = () => {
     return (
-        <div className="container mx-2 p-3">
+        <div className="container mx-2 p-3 pt-16">
             <div className="max-w-full">
                 <h2 className="text-lg w-fit font-semibold border-b-2 border-red-600 md:text-center">Concept</h2>
             </div>
