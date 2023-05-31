@@ -6,6 +6,13 @@ import Ilustration from "./components/Ilustration"
 import Personal from "./components/Personal"
 import Footer from "./components/Footer"
 
+/*
+Todo:
+1. Fix responsive
+2. Router
+
+
+ */
 
 function App() {
   const [hamburger, setHumberger] = useState("block mx-4 transition ease-in-out my-2 px-6 h-0.5 bg-slate-600")
