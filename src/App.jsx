@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import ExtraMenu from "./components/ExtraMenu";
 import Concept from "./components/Concept";
+import Ilustration from "./components/Ilustration";
 
 
 function App() {
@@ -33,7 +34,10 @@ function App() {
      <ExtraMenu styleMenu={styleMenu} styleLink={styleLink}/>
      {/* Main content */}
      {visibilityContent &&
-        <Concept />
+        <>
+          <Concept />
+          <Ilustration />
+        </>
      }
      
     </div>

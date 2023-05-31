@@ -1,8 +1,8 @@
-import first from "../assets/concept/1.jpg";
-import second from "../assets/concept/2.jpg";
-import third from "../assets/concept/3.jpg";
-import fourth from "../assets/concept/4.jpg";
-import five from "../assets/concept/5.jpg";
+import first from "../assets/concept/1.jpg"
+import second from "../assets/concept/2.jpg"
+import third from "../assets/concept/3.jpg"
+import fourth from "../assets/concept/4.jpg"
+import five from "../assets/concept/5.jpg"
 
 
 const Concept = () => {
