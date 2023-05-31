@@ -1,8 +1,9 @@
-import { useState } from "react";
-import Navbar from "./components/Navbar";
-import ExtraMenu from "./components/ExtraMenu";
-import Concept from "./components/Concept";
-import Ilustration from "./components/Ilustration";
+import { useState } from "react"
+import Navbar from "./components/Navbar"
+import ExtraMenu from "./components/ExtraMenu"
+import Concept from "./components/Concept"
+import Ilustration from "./components/Ilustration"
+import Personal from "./components/Personal"
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <>
           <Concept />
           <Ilustration />
+          <Personal />
         </>
      }
      

@@ -6,7 +6,7 @@ const Ilustration = () => {
     return(
     	<div className="container mx-2 mt-3 p-3">
     		<div className="max-w-full">
-    			<h2 className="text-lg w-fit font-semibold border-b-2 border-slate-600 md:text-center">Ilustration</h2>
+    			<h2 className="text-lg w-fit font-semibold border-b-2 border-lime-600">Ilustration</h2>
     		</div>
     		<div className="w-screen flex flex-wrap md:justify-center">
     			<div className="w-3/4 mt-2 md:w-72">
