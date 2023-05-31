@@ -9,6 +9,8 @@ const Navbar = (props) => {
                 <div onClick={handler}>
                     <span className={hamburger}></span>
                     <span className={hamburger}></span>
+                    <span className={hamburger}></span>
+                    
                 </div>
             </div>
         </div>

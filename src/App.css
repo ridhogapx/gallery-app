@@ -1,8 +1,13 @@
 .cross:nth-child(1) {
-    transform: rotate(-45deg) scale(.50) translate(-15px);
+    transform: rotate(-45deg) scale(.50) translate(-25px);
 }
 
 .cross:nth-child(2) {
-    transform: rotate(45deg) scale(.50) translate(-16px);
+    transform: scale(0);
+
+}
+
+.cross:nth-child(3) {
+    transform: rotate(45deg) scale(.50) translate(-28px);
 
 }
