@@ -24,9 +24,15 @@ function App() {
 
   const toggleMenu = () => {
     if(hamburger.includes("cross")) {
-        setHumberger("block mx-4 transition ease-in-out my-2 px-6 h-0.5 bg-slate-600")
-        setStyleMenu("overflow-hidden flex  flex-col gap-y-16 h-0 justify-center items-center")
-        setStyleLink("transition ease-in duration-300 text-2xl font-bold opacity-0")
+        setHumberger(previous => {
+          return previous.replace("cross", " ")
+        })
+        setStyleMenu(previous => {
+          return previous.replace("h-screen", "h-0")
+        })
+        setStyleLink(previous => {
+          return previous.concat(" ", "opacity-0")
+        })
         setVisibilityContent(true);
     } else {
         setHumberger(previous => {
