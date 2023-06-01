@@ -32,7 +32,9 @@ function App() {
         setHumberger(previous => {
          return previous.concat(" ", "cross")
         })
-        setStyleMenu("overflow-hidden flex flex-col gap-y-16 h-screen justify-center items-center")
+        setStyleMenu(previous => {
+          return previous.replace("h-0", "h-screen")
+        })
         setStyleLink("transition ease-in duration-300 text-2xl font-bold")
         setVisibilityContent(false);
     }
