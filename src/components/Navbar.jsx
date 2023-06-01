@@ -11,7 +11,6 @@ const Navbar = (props) => {
                     <span className={hamburger}></span>
                     <span className={hamburger}></span>
                     <span className={hamburger}></span>
-
                 </div>
             </div>
         </div>
