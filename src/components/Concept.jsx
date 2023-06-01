@@ -13,24 +13,24 @@ const Concept = () => {
             </div>
 
             <div className="w-screen flex flex-wrap md:justify-center">
-                <div className="w-3/4 mt-2 md:w-72 ">
-                    <img src={first} alt="Content" />
+                <div className="max-w-3/4 mt-2 md:max-w-72 md:mx-2 md:max-h-72 md:overflow-hidden">
+                    <img src={first} alt="Content" width="300" />
                 </div>
 
-                <div className="w-3/4 mt-2 md:w-72 md:mx-3 md:h-72">
-                    <img src={second} alt="Content" />
+                <div className="max-w-3/4 mt-2 md:max-w-72 md:mx-2 md:max-h-72 md:overflow-hidden">
+                    <img src={second} alt="Content" width="300" />
                 </div>
 
-                <div className="w-3/4 mt-2 md:w-72 md:mx-3 md:h-72">
-                    <img src={third} alt="Content"  />
+                <div className="max-w-3/4 mt-2 md:max-w-72 md:mx-2 md:max-h-72 md:overflow-hidden">
+                    <img src={third} alt="Content" width="300"  />
                 </div>
 
-                <div className="w-3/4 mt-2 md:w-72 md:mx-3 md:max-h-72 md:overflow-hidden">
-                    <img src={fourth} alt="Content" />
+                <div className="max-w-3/4 mt-2 md:max-w-72 md:mx-2 md:max-h-72 md:overflow-hidden">
+                    <img src={fourth} alt="Content" width="300" />
                 </div>
 
-                <div className="w-3/4 mt-2 md:w-72 md:mx-3 md:max-h-72">
-                    <img src={five} alt="Content"/>
+                <div className="max-w-3/4 mt-2 md:max-w-72 md:mx-2 md:max-h-72 md:overflow-hidden">
+                    <img src={five} alt="Content" width="300"/>
                 </div>
 
             </div>
