@@ -35,7 +35,9 @@ function App() {
         setStyleMenu(previous => {
           return previous.replace("h-0", "h-screen")
         })
-        setStyleLink("transition ease-in duration-300 text-2xl font-bold")
+        setStyleLink(previous => {
+          return previous.replace("opacity-0", " ")
+        })
         setVisibilityContent(false);
     }
     
