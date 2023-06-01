@@ -7,9 +7,9 @@ const Personal = () => {
 	return (
 		<div className="container mx-2 mt-3 p-3">
 			<div className="max-w-full">
-				<h2 className="text-lg w-fit font-semibold border-b-2 border-yellow-600">Personal</h2>
+				<h2 className="text-lg w-fit lg:mx-5 font-semibold border-b-2 border-yellow-600">Personal</h2>
 			</div>
-			<div className="max-w-full flex flex-wrap ">
+			<div className="max-w-full flex flex-wrap lg:mx-5 ">
 				<div className="max-w-sm max-h-72 md:mx-2 overflow-hidden mt-2 md:w-72">
 					<img src={first} alt="Content" className="w-72 lg:w-96" />
 				</div>
