@@ -1,4 +1,6 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePage from "./components/HomePage"
+import Concept from "./components/Concept"
 /*
 Todo:
 1. Fix responsive (Done)
@@ -9,7 +11,12 @@ Todo:
 
 function App() {
   return (
-     <HomePage />
+     <BrowserRouter>
+       <Routes>
+           <Route index element={<HomePage />} />
+           <Route path="concept" element={<Concept />} />
+       </Routes>
+     </BrowserRouter>
     )
  
 }
