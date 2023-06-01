@@ -9,6 +9,7 @@ import Footer from "./components/Footer"
 /*
 Todo:
 1. Fix responsive
+2. Navbar Desktop
 2. Router
 
 
