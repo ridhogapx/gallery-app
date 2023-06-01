@@ -12,7 +12,7 @@ const Navbar = (props) => {
                     <span className={hamburger}></span>
                     <span className={hamburger}></span>
                 </div>
-                <div className="flex">
+                <div className="hidden lg:flex">
                     <a href="#" className="block mx-3 border-b-2 border-slate-700">Concept</a>
                     <a href="# "className="block mx-3">Ilustration</a>
                     <a href="#" className="block mx-3">Personal</a>
