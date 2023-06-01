@@ -29,7 +29,9 @@ function App() {
         setStyleLink("transition ease-in duration-300 text-2xl font-bold opacity-0")
         setVisibilityContent(true);
     } else {
-        setHumberger("block mx-4 transition ease-in-out my-2 px-6 h-0.5 bg-slate-600 cross")
+        setHumberger(previous => {
+         return previous.concat(" ", "cross")
+        })
         setStyleMenu("overflow-hidden flex flex-col gap-y-16 h-screen justify-center items-center")
         setStyleLink("transition ease-in duration-300 text-2xl font-bold")
         setVisibilityContent(false);
