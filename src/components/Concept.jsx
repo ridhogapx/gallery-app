@@ -31,7 +31,9 @@ const Concept = () => {
     ]
 
     return (
-       <Section title="Concept" content={content} />
+      <div className="pt-8">
+           <Section title="Concept" content={content} />
+      </div>
     )
 }
 
