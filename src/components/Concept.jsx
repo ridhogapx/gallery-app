@@ -9,28 +9,28 @@ const Concept = () => {
     return (
         <div className="container mx-2 p-3 pt-16">
             <div className="max-w-full">
-                <h2 className="text-lg w-fit font-semibold border-b-2 border-red-600 ">Concept</h2>
+                <h2 className="text-lg w-fit lg:mx-10 font-semibold border-b-2 border-red-600 ">Concept</h2>
             </div>
 
-            <div className="w-screen flex flex-wrap md:justify-center">
-                <div className="max-w-3/4 mt-2 md:max-w-72 md:mx-2 md:max-h-72 md:overflow-hidden">
-                    <img src={first} alt="Content" width="300" />
+            <div className="max-w-full flex flex-wrap lg:justify-center">
+                <div className="max-w-3/4 max-h-72 mt-2 md:max-w-sm md:mx-2 md:max-h-72  overflow-hidden">
+                    <img src={first} alt="Content" className="w-72 lg:w-96" />
                 </div>
 
-                <div className="max-w-3/4 mt-2 md:max-w-72 md:mx-2 md:max-h-72 md:overflow-hidden">
-                    <img src={second} alt="Content" width="300" />
+                <div className="max-w-3/4 max-h-72 mt-2 md:max-w-sm md:mx-2 md:max-h-72 overflow-hidden">
+                    <img src={second} alt="Content" className="w-72 lg:w-96" />
                 </div>
 
-                <div className="max-w-3/4 mt-2 md:max-w-72 md:mx-2 md:max-h-72 md:overflow-hidden">
-                    <img src={third} alt="Content" width="300"  />
+                <div className="max-w-3/4 max-h-72 mt-2 md:max-w-sm md:mx-2 md:max-h-72 overflow-hidden">
+                    <img src={third} alt="Content" className="w-72 lg:w-96"  />
                 </div>
 
-                <div className="max-w-3/4 mt-2 md:max-w-72 md:mx-2 md:max-h-72 md:overflow-hidden">
-                    <img src={fourth} alt="Content" width="300" />
+                <div className="max-w-3/4 max-h-72 mt-2 md:max-w-sm md:mx-2 md:max-h-72 overflow-hidden">
+                    <img src={fourth} alt="Content" className="w-72 lg:w-96" />
                 </div>
 
-                <div className="max-w-3/4 mt-2 md:max-w-72 md:mx-2 md:max-h-72 md:overflow-hidden">
-                    <img src={five} alt="Content" width="300"/>
+                <div className="max-w-3/4 max-h-72 mt-2 md:max-w-sm md:mx-2 md:max-h-72 overflow-hidden">
+                    <img src={five} alt="Content" className="w-72 lg:w-96"/>
                 </div>
 
             </div>
