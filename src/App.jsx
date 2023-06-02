@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import HomePage from "./components/HomePage"
 import Concept from "./components/Concept"
 /*
@@ -11,12 +11,10 @@ Todo:
 
 function App() {
   return (
-     <BrowserRouter>
        <Routes>
            <Route index element={<HomePage />} />
-           <Route path="concept" element={<Concept />} />
+           <Route path="/concept" element={<Concept />} />
        </Routes>
-     </BrowserRouter>
     )
  
 }
