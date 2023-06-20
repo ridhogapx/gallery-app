@@ -13,7 +13,7 @@ const ExtraMenu = (props) => {
                 <a href='#' className={styleLink}>Ilustration</a>
             </div>
             <div>
-                <a href='#' className={styleLink}>Personal</a>
+                <NavLink to="" className={styleLink}>Personal Project</NavLink>
             </div>
             <div>
                 <a href='#' className={styleLink}>Contact</a>
