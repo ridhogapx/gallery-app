@@ -5,7 +5,7 @@ const ExtraMenu = (props) => {
     const { styleLink} = props;
 
     return (
-        <nav className={styleMenu} id="mobileNav">
+        <nav className={styleMenu}>
              <div className="mNav">
                 <NavLink to="/" className={styleLink}>Home</NavLink>
             </div>
