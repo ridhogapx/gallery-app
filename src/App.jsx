@@ -67,7 +67,7 @@ function App() {
        }}>
         
         <Routes>
-            <Route index element={<HomePage visibility={visibilityContent}/>} />
+            <Route path="/" element={<HomePage visibility={visibilityContent}/>} />
             <Route path="/concept" element={visibilityContent && <Concept />} />
         </Routes>
        </div>

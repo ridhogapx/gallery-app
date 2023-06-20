@@ -13,13 +13,13 @@ const ExtraMenu = (props) => {
                 <NavLink to="/concept" className={styleLink}>Concept</NavLink>
             </div>
             <div className="mNav">
-                <NavLink to="" className={styleLink}>Ilustration</NavLink>
+                <NavLink to="/ilustration" className={styleLink}>Ilustration</NavLink>
             </div>
             <div className="mNav">
-                <NavLink to="" className={styleLink}>Personal Project</NavLink>
+                <NavLink to="/personal" className={styleLink}>Personal Project</NavLink>
             </div>
             <div className="mNav">
-                <NavLink to="" className={styleLink}>Contact</NavLink>
+                <NavLink to="/contact" className={styleLink}>Contact</NavLink>
             </div>
         </nav>
     )
