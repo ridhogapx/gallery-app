@@ -20,6 +20,10 @@
     animation: 0.5s fadeOut forwards;
 }
 
+#mobileNav .mNav a.active {
+    border-bottom: 2px solid #8e8c8c;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
