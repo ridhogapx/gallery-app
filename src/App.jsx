@@ -68,7 +68,7 @@ function App() {
         
         <Routes>
             <Route index element={<HomePage visibility={visibilityContent}/>} />
-            <Route path="/concept" element={<Concept visibility={visibilityContent} />} />
+            <Route path="/concept" element={<Concept />} />
         </Routes>
        </div>
         

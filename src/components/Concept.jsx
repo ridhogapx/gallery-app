@@ -6,8 +6,7 @@ import fourth from "../assets/concept/4.jpg"
 import five from "../assets/concept/5.jpg"
 
 
-const Concept = (props) => {
-    const { visibility } = props
+const Concept = () => {
     const content = [
         {
             id: 1,
@@ -31,14 +30,9 @@ const Concept = (props) => {
         },
     ]
     return (
-        <>
-             {visibility && 
-                <div className="pt-8">
+            <div className="pt-8">
                     <Section title="Concept" content={content} />
-                </div>
-            }
-        </>
-      
+            </div>
     )
 }
 
