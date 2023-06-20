@@ -57,7 +57,9 @@ function App() {
         window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
           if(e.matches) {
             setVisibilityContent(true);
-          } 
+          } else{
+            setVisibilityContent(false);
+          }
         })
 
 
