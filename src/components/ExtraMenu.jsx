@@ -6,17 +6,20 @@ const ExtraMenu = (props) => {
 
     return (
         <nav className={styleMenu}>
+             <div>
+                <NavLink to="/" className={styleLink}>Home</NavLink>
+            </div>
             <div>
                 <NavLink to="/concept" className={styleLink}>Concept</NavLink>
             </div>
             <div>
-                <a href='#' className={styleLink}>Ilustration</a>
+                <NavLink to="" className={styleLink}>Ilustration</NavLink>
             </div>
             <div>
                 <NavLink to="" className={styleLink}>Personal Project</NavLink>
             </div>
             <div>
-                <a href='#' className={styleLink}>Contact</a>
+                <NavLink to="" className={styleLink}>Contact</NavLink>
             </div>
            
         </nav>
