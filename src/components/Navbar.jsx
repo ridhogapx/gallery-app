@@ -14,12 +14,12 @@ const Navbar = (props) => {
                     <span className={hamburger}></span>
                     <span className={hamburger}></span>
                 </div>
-                <div className="hidden lg:flex">
-                    <NavLink to="/" className="block mx-3">Home</NavLink>
-                    <NavLink to="/concept" className="block mx-3">Concept</NavLink>
-                    <NavLink to="" className="block mx-3">Ilustration</NavLink>
-                    <NavLink to="" className="block mx-3">Personal Project</NavLink>
-                    <NavLink to="" className="block mx-3">Contact</NavLink>
+                <div className="hidden lg:flex navMenu transition ease-in-out">
+                    <NavLink to="/" className="block mx-3 transition ease-in-out">Home</NavLink>
+                    <NavLink to="/concept" className="block mx-3 transition ease-in-out">Concept</NavLink>
+                    <NavLink to="/ilustration" className="block mx-3 transition ease-in-out">Ilustration</NavLink>
+                    <NavLink to="/personal" className="block mx-3 transition ease-in-out">Personal Project</NavLink>
+                    <NavLink to="/contact" className="block mx-3 transition ease-in-out">Contact</NavLink>
                 </div>
             </div>
         </div>

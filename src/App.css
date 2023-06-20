@@ -20,7 +20,7 @@
     animation: 0.5s fadeOut forwards;
 }
 
-.mNav a.active {
+.navMenu a.active {
     border-bottom: 2px solid #8e8c8c;
 }
 
