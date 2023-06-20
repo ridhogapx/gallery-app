@@ -17,7 +17,7 @@ const Navbar = (props) => {
                 <div className="hidden lg:flex">
                     <NavLink to="/concept" className="block mx-3 border-b-2 border-slate-700">Concept</NavLink>
                     <a href="# "className="block mx-3">Ilustration</a>
-                    <a href="#" className="block mx-3">Personal</a>
+                    <NavLink to="" className="block mx-3">Personal Project</NavLink>
                     <a href="#" className="block mx-3">Contact</a>
                 </div>
             </div>
