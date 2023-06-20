@@ -18,10 +18,11 @@ function App() {
     const [transition, setTransition] = useState("fadeIn")
     // Location state
     const [currentLocation, setCurrentLocation] = useState(location)
-
+   
+    // Styling state (is mess up as hell!!)
     const [hamburger, setHumberger] = useState("block mx-4 transition ease-in-out my-2 px-6 h-0.5 bg-slate-600")
-  	const [styleMenu, setStyleMenu] = useState("overflow-hidden flex flex-col gap-y-16 h-0 justify-center items-center")
-  	const [styleLink, setStyleLink] = useState("transition ease-in duration-300 text-2xl font-bold opacity-0 ");
+  	const [styleMenu, setStyleMenu] = useState("overflow-hidden flex flex-col gap-y-16 h-0 justify-center items-center lg:hidden")
+  	const [styleLink, setStyleLink] = useState("transition ease-in duration-300 text-2xl font-bold opacity-0 lg:hidden");
   	const [visibilityContent, setVisibilityContent] = useState(true);
 
     const toggleMenu = () => {
@@ -53,6 +54,13 @@ function App() {
 
     useEffect(() => {
         if(currentLocation != location) setTransition("fadeOut")
+        window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
+          if(e.matches) {
+            setVisibilityContent(true);
+          } 
+        })
+
+
     }, [location, currentLocation])
 
     return (
