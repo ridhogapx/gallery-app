@@ -53,7 +53,20 @@ function App() {
   }
 
     useEffect(() => {
-        if(currentLocation != location) setTransition("fadeOut")
+        if(currentLocation != location) {
+          setTransition("fadeOut")
+          setHumberger(previous => {
+	          return previous.replace("cross", " ")
+	        })
+	        setStyleMenu(previous => {
+	          return previous.replace("h-screen", "h-0")
+	        })
+	        setStyleLink(previous => {
+	          return previous.concat(" ", "opacity-0")
+	        })
+	        setVisibilityContent(true);
+        }
+
         window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
           if(e.matches) {
             setVisibilityContent(true);
