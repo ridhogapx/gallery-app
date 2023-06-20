@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Navbar = (props) => {
     const { handler } = props;
     const { hamburger } = props;
@@ -13,7 +15,7 @@ const Navbar = (props) => {
                     <span className={hamburger}></span>
                 </div>
                 <div className="hidden lg:flex">
-                    <a href="#" className="block mx-3 border-b-2 border-slate-700">Concept</a>
+                    <NavLink to="/concept" className="block mx-3 border-b-2 border-slate-700">Concept</NavLink>
                     <a href="# "className="block mx-3">Ilustration</a>
                     <a href="#" className="block mx-3">Personal</a>
                     <a href="#" className="block mx-3">Contact</a>

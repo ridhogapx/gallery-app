@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const ExtraMenu = (props) => {
     const { styleMenu } = props
     const { styleLink} = props;
@@ -5,7 +7,7 @@ const ExtraMenu = (props) => {
     return (
         <nav className={styleMenu}>
             <div>
-                <a href='#' className={styleLink}>Concept</a>
+                <NavLink to="/concept" className={styleLink}>Concept</NavLink>
             </div>
             <div>
                 <a href='#' className={styleLink}>Ilustration</a>
