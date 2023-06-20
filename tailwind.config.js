@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// Using google font "Montserrat"
 export default {
   content: [
    "./index.html",
