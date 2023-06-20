@@ -1,3 +1,4 @@
+// Leaving as its default
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
