@@ -47,13 +47,13 @@ function App() {
 	        setStyleLink(previous => {
 	          return previous.replace("opacity-0", " ")
 	        })
-	        setVisibilityContent(false);
+	        setVisibilityContent(false)
 	    }
     
   }
 
     useEffect(() => {
-        if(currentLocation != location) {
+        if(location != currentLocation) {
           setTransition("fadeOut")
           setHumberger(previous => {
 	          return previous.replace("cross", " ")
@@ -64,7 +64,7 @@ function App() {
 	        setStyleLink(previous => {
 	          return previous.concat(" ", "opacity-0")
 	        })
-	        setVisibilityContent(true);
+	        setVisibilityContent(true)
         }
 
         window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
@@ -88,7 +88,7 @@ function App() {
        }}>
         
         <Routes>
-            <Route path="/" element={<HomePage visibility={visibilityContent}/>} />
+            <Route index element={<HomePage visibility={visibilityContent}/>} />
             <Route path="/concept" element={visibilityContent && <Concept />} />
         </Routes>
        </div>
