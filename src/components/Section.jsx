@@ -1,9 +1,13 @@
 const Section = (props) => {
-	const { content, title } = props
+	const { content, title, color } = props
+	const titleSection = ["text-lg", "w-fit", "lg:mx-5", "font-semibold", "border-b-2"]
+	titleSection.push(color)
+	const style = titleSection.join(" ")
+	
 	return (
 		<div className="container mx-2 mt-3 p-3">
-			<div className="max-w-full">
-				<h2 className="text-lg w-fit lg:mx-5 font-semibold border-b-2 border-yellow-600">{title}</h2>
+			<div className="max-w-full ">
+				<h2 className={style}>{title}</h2>
 			</div>
 			<div className="max-w-full flex flex-wrap lg:mx-5 ">
 			{content.map((result) => 
