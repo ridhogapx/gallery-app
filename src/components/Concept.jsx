@@ -31,7 +31,7 @@ const Concept = () => {
     ]
     return (
             <div className="pt-8">
-                    <Section title="Concept" content={content} />
+                    <Section title="Concept" content={content} color={"border-red-500"}/>
             </div>
     )
 }
