@@ -1,3 +1,4 @@
+import Transition from "../components/Transition"
 import Concept from "../components/Concept"
 import Ilustration from "../components/Ilustration"
 import Personal from "../components/Personal"
@@ -9,17 +10,19 @@ import Hero from "../components/Hero"
 const HomePage = (props) => {
 	const { visibility } = props
   	return (
-		<div className="overflow-hidden">
-			{visibility &&
-				<>
-				<Hero />
-				<Concept />
-				<Ilustration />
-				<Personal />
-				<Footer />
-				</>
-			}
-		</div>
+		<Transition children={
+			<div className="overflow-hidden">
+				{visibility &&
+					<>
+					<Hero />
+					<Concept />
+					<Ilustration />
+					<Personal />
+					<Footer />
+					</>
+				}
+			</div>
+		}/>
   )
 }
 
