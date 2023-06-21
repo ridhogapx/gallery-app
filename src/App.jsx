@@ -2,9 +2,9 @@ import { Routes, Route, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react"
 import HomePage from "./pages/HomePage"
 import ConceptPage from "./pages/ConceptPage"
-import Concept from "./components/Concept"
 import Navbar from "./components/Navbar"
 import ExtraMenu from "./components/ExtraMenu"
+import IlustrationPage from "./pages/IlustrationPage"
 /*
 Todo:
 1. Fix responsive (Done)
@@ -15,10 +15,12 @@ Todo:
 
 function App() {
     const location = useLocation()
+
+     // Location state
+     const [currentLocation, setCurrentLocation] = useState(location)
+
     // Style state
     const [transition, setTransition] = useState("fadeInRoute")
-    // Location state
-    const [currentLocation, setCurrentLocation] = useState(location)
    
     // Styling state (is mess up as hell!!)
     const [hamburger, setHumberger] = useState("block mx-4 transition ease-in-out my-2 px-6 h-0.5 bg-slate-600")
@@ -54,7 +56,7 @@ function App() {
   }
 
     useEffect(() => {
-        if(location != currentLocation) {
+        if(location !== currentLocation) {
           setTransition("fadeOutRoute")
           setHumberger(previous => {
 	          return previous.replace("cross", " ")
@@ -78,7 +80,7 @@ function App() {
     }, [location, currentLocation])
 
     return (
-       <div className="font-main">
+      <div className="font-main">
        <Navbar handler={toggleMenu} hamburger={hamburger}/>
        <ExtraMenu styleMenu={styleMenu} styleLink={styleLink}/>
        <div className={transition} onAnimationEnd={() => {
@@ -91,9 +93,10 @@ function App() {
         <Routes>
             <Route index element={<HomePage visibility={visibilityContent}/>} />
             <Route path="/concept" element={<ConceptPage />} />
+            <Route path="/ilustration" element={<IlustrationPage />} />
+
         </Routes>
        </div>
-        
        </div>
         )
  
