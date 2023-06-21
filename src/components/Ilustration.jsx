@@ -19,7 +19,7 @@ const Ilustration = () => {
     ]
 
     return(
-    	<Section title="Ilustration" content={content} />
+    	<Section title="Ilustration" content={content} color={"border-slate-500"} />
     )
 }
 
