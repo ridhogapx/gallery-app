@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { AnimatePresence } from "framer-motion"
 import HomePage from "./pages/HomePage"
 import ConceptPage from "./pages/ConceptPage"
 import Navbar from "./components/Navbar"
@@ -18,9 +19,6 @@ function App() {
 
      // Location state
      const [currentLocation, setCurrentLocation] = useState(location)
-
-    // Style state
-    const [transition, setTransition] = useState("fadeInRoute")
    
     // Styling state (is mess up as hell!!)
     const [hamburger, setHumberger] = useState("block mx-4 transition ease-in-out my-2 px-6 h-0.5 bg-slate-600")
@@ -57,7 +55,7 @@ function App() {
 
     useEffect(() => {
         if(location !== currentLocation) {
-          setTransition("fadeOutRoute")
+          setCurrentLocation(location)
           setHumberger(previous => {
 	          return previous.replace("cross", " ")
 	        })
@@ -83,21 +81,19 @@ function App() {
       <div className="font-main">
        <Navbar handler={toggleMenu} hamburger={hamburger}/>
        <ExtraMenu styleMenu={styleMenu} styleLink={styleLink}/>
-       <div className={transition} onAnimationEnd={() => {
-        if(transition == "fadeOutRoute") {
-            setTransition("fadeInRoute")
-            setCurrentLocation(location)
-        }
-       }}>
+       
         
-        <Routes>
-            <Route index element={<HomePage visibility={visibilityContent}/>} />
-            <Route path="/concept" element={<ConceptPage />} />
-            <Route path="/ilustration" element={<IlustrationPage />} />
+        <AnimatePresence>
+          <Routes location={location} key={location.pathname}>
+              <Route index element={<HomePage visibility={visibilityContent}/>} />
+              <Route path="/concept" element={<ConceptPage />} />
+              <Route path="/ilustration" element={<IlustrationPage />} />
+          </Routes>
+        </AnimatePresence>
 
-        </Routes>
+        
        </div>
-       </div>
+     
         )
  
 }

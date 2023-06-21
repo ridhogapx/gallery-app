@@ -12,15 +12,15 @@
 
 }
 
-.fadeInRoute {
-    animation: 0.5s fadeInRoute forwards;
+.fadeIn {
+    animation: 0.5s fadeIn forwards;
 }
 
-.fadeOutRoute {
-    animation: 0.5s fadeOutRoute forwards;
+.fadeOut {
+    animation: 0.5s fadeOut forwards;
 }
 
-@keyframes fadeInRoute {
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translate(-20px, 0px);
@@ -31,7 +31,7 @@
     }
 }
 
-@keyframes fadeOutRoute {
+@keyframes fadeOut {
     from {
         opacity: 1;
         transform: translate(0px, 0px);
