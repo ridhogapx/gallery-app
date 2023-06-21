@@ -2,7 +2,7 @@ import Card from "./Card"
 import Stats from "./Stats"
 const Hero = () => {
     return(
-        <div className="container lg:mx-5 pt-20 flex">
+        <div className="container lg:mx-5 pt-20 flex flex-wrap">
 					<Card title="About Me" children={
 						<>
 							<p className="text-base mt-2 tracking-wide text-slate-400">
