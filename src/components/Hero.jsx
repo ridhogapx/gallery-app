@@ -1,4 +1,5 @@
 import Card from "./Card"
+import Stats from "./Stats"
 const Hero = () => {
     return(
         <div className="container lg:mx-5 pt-20 flex">
@@ -13,7 +14,7 @@ const Hero = () => {
 					<Card title="Skills" children={
 						<div className="mt-2">
 							<h2 className="text-slate-400 text-base">3D Modelling</h2>
-							<div className="w-[50%] h-1 p-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+							<Stats width="w-[65%]" />
 						</div>
 					} />
 				</div>
