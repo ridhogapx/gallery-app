@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react"
 import HomePage from "./pages/HomePage"
+import ConceptPage from "./pages/ConceptPage"
 import Concept from "./components/Concept"
 import Navbar from "./components/Navbar"
 import ExtraMenu from "./components/ExtraMenu"
@@ -15,7 +16,7 @@ Todo:
 function App() {
     const location = useLocation()
     // Style state
-    const [transition, setTransition] = useState("fadeIn")
+    const [transition, setTransition] = useState("fadeInRoute")
     // Location state
     const [currentLocation, setCurrentLocation] = useState(location)
    
@@ -54,7 +55,7 @@ function App() {
 
     useEffect(() => {
         if(location != currentLocation) {
-          setTransition("fadeOut")
+          setTransition("fadeOutRoute")
           setHumberger(previous => {
 	          return previous.replace("cross", " ")
 	        })
@@ -81,15 +82,15 @@ function App() {
        <Navbar handler={toggleMenu} hamburger={hamburger}/>
        <ExtraMenu styleMenu={styleMenu} styleLink={styleLink}/>
        <div className={transition} onAnimationEnd={() => {
-        if(transition == "fadeOut") {
-            setTransition("fadeIn")
+        if(transition == "fadeOutRoute") {
+            setTransition("fadeInRoute")
             setCurrentLocation(location)
         }
        }}>
         
         <Routes>
             <Route index element={<HomePage visibility={visibilityContent}/>} />
-            <Route path="/concept" element={visibilityContent && <Concept />} />
+            <Route path="/concept" element={<ConceptPage />} />
         </Routes>
        </div>
         

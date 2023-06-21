@@ -12,19 +12,19 @@
 
 }
 
-.fadeIn {
-    animation: 0.5s fadeIn forwards;
+.fadeInRoute {
+    animation: 0.5s fadeInRoute forwards;
 }
 
-.fadeOut {
-    animation: 0.5s fadeOut forwards;
+.fadeOutRoute {
+    animation: 0.5s fadeOutRoute forwards;
 }
 
 .navMenu a.active {
     border-bottom: 2px solid #8e8c8c;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInRoute {
     from {
         opacity: 0;
         transform: translate(-20px, 0px);
@@ -35,7 +35,7 @@
     }
 }
 
-@keyframes fadeOut {
+@keyframes fadeOutRoute {
     from {
         opacity: 1;
         transform: translate(0px, 0px);
