@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react"
-import HomePage from "./components/HomePage"
+import HomePage from "./pages/HomePage"
 import Concept from "./components/Concept"
 import Navbar from "./components/Navbar"
 import ExtraMenu from "./components/ExtraMenu"

@@ -1,8 +1,8 @@
-import Concept from "./Concept"
-import Ilustration from "./Ilustration"
-import Personal from "./Personal"
-import Footer from "./Footer"
-import Hero from "./Hero"
+import Concept from "../components/Concept"
+import Ilustration from "../components/Ilustration"
+import Personal from "../components/Personal"
+import Footer from "../components/Footer"
+import Hero from "../components/Hero"
 
 // Todo: Hero Section
 
