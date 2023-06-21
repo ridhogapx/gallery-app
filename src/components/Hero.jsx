@@ -15,6 +15,8 @@ const Hero = () => {
 						<div className="mt-2">
 							<h2 className="text-slate-400 text-base">3D Modelling</h2>
 							<Stats width="w-[65%]" />
+							<h2 className="mt-1 text-slate-400 text-base">Animation</h2>
+							<Stats width="w-[54%]"/>
 						</div>
 					} />
 				</div>
