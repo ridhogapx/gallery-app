@@ -10,6 +10,9 @@ const Hero = () => {
 							<button className="mt-2 px-10 py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-70 transition ease-in-out text-base">Contact</button>
 						</>
 					} />
+					<Card title="Skills" children={
+						<></>
+					} />
 				</div>
     )
 }
