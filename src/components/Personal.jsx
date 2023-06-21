@@ -20,7 +20,7 @@ const Personal = () => {
 	]
 
 	return (
-		<Section title="Personal" content={content} />
+		<Section title="Personal" content={content} color={"border-sky-500"} />
 	)
 }
 
