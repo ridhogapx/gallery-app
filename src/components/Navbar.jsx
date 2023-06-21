@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import icon from "../assets/50.png"
+import icon from "../assets/pls.png"
 
 const Navbar = (props) => {
     const { handler } = props;
@@ -7,8 +7,11 @@ const Navbar = (props) => {
 
     return (
         <div className="container fixed top-0 z-10 backdrop-blur-md w-screen">
-            <div className="flex w-screen mx-2 p-3 max-w-full justify-between ">
-                <img src={icon} alt="Icon" className="mx-5" />
+            <div className="flex w-screen mx-2 p-3 max-w-full justify-between items-center ">
+                <div className="flex items-center">
+                    <NavLink to="/"><img src={icon} alt="Icon" className="mx-3" /></NavLink>
+                    <h2 className="font-semibold text-lg">Gions Ilustrator</h2>
+                </div>
                 {/* Hamburger */}
                 <div onClick={handler} className="md:hidden">
                     <span className={hamburger}></span>
