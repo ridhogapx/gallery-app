@@ -1,10 +1,11 @@
 import Transition from "../components/Transition"
+import Ilustration from "../components/Ilustration"
 
 const IlustrationPage = () => {
     return (
         <Transition children={
-            <div className="pt-14">
-                <h2>Ilustration Page</h2>
+            <div className="pt-5">
+                <Ilustration />
             </div>
         }/>
     )
