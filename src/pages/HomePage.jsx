@@ -5,7 +5,6 @@ import Personal from "../components/Personal"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 
-// Todo: Hero Section
 
 const HomePage = (props) => {
 	const { visibility } = props
