@@ -5,6 +5,7 @@ const Navbar = (props) => {
     const { handler } = props;
     const { hamburger } = props;
     const style = ["block", "mx-3", "transition", "ease-in-out"]
+    const implementStyle = style.join(" ")
 
     return (
         <div className="container fixed top-0 z-10 backdrop-blur-md w-screen">
@@ -20,11 +21,11 @@ const Navbar = (props) => {
                     <span className={hamburger}></span>
                 </div>
                 <div className="hidden lg:flex navMenu transition ease-in-out">
-                    <NavLink to="/" className={style.join(" ")}>Home</NavLink>
-                    <NavLink to="/concept" className={style.join(" ")}>Concept</NavLink>
-                    <NavLink to="/ilustration" className={style.join(" ")}>Ilustration</NavLink>
-                    <NavLink to="/personal" className={style.join(" ")}>Personal Project</NavLink>
-                    <NavLink to="/contact" className={style.join(" ")}>Contact</NavLink>
+                    <NavLink to="/" className={implementStyle}>Home</NavLink>
+                    <NavLink to="/concept" className={implementStyle}>Concept</NavLink>
+                    <NavLink to="/ilustration" className={implementStyle}>Ilustration</NavLink>
+                    <NavLink to="/personal" className={implementStyle}>Personal Project</NavLink>
+                    <NavLink to="/contact" className={implementStyle}>Contact</NavLink>
                 </div>
             </div>
         </div>
