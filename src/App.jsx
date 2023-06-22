@@ -84,12 +84,8 @@ function App() {
 			  <Route path="/personal" element={<PersonalPage visibility={visibilityContent} />}  />
 		  </Routes>
         </AnimatePresence>
-
-        
        </div>
-     
         )
- 
 }
 
 export default App;
