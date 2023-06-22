@@ -79,7 +79,7 @@ function App() {
           <Routes location={location} key={location.pathname}>
               <Route index element={<HomePage visibility={visibilityContent}/>} />
               <Route path="/concept" element={<ConceptPage visibility={visibilityContent} />} />
-              <Route path="/ilustration" element={<IlustrationPage />} />
+              <Route path="/ilustration" element={<IlustrationPage visibility={visibilityContent}/>} />
           </Routes>
         </AnimatePresence>
 
