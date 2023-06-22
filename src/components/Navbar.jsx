@@ -4,7 +4,7 @@ import icon from "../assets/pls.png"
 const Navbar = (props) => {
     const { handler } = props;
     const { hamburger } = props;
-    const style = ["block", "mx-3", "transition", "ease-in-out"]
+    const style = ["block", "mx-3", "transition", "ease-in-out", "hover:border-b-2", "hover:border-slate-400"]
     const implementStyle = style.join(" ")
 
     return (
