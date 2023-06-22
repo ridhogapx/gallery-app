@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import Card from "./Card"
 import Stats from "./Stats"
+import StatsSkeleton from "./StatsSkeleton"
+
 const Hero = () => {
     return(
         <div className="container lg:mx-5 pt-20 flex flex-wrap">
@@ -14,11 +16,11 @@ const Hero = () => {
 					} />
 					<Card title="Skills" children={
 						<div className="mt-2">
-							<Stats title="3D Modelling" width="w-[65%]" />
-							<Stats title="Photoshop" width="w-[54%]"/>
-							<Stats title="2D Animation" width="w-[20%]"/>
-							<Stats title="3D Animation" width="w-[30%]"/>
-							<Stats title="Drawing" width="w-[70%]"/>
+							<StatsSkeleton title="3D Modelling" progress={<Stats width="w-[65%]" />} />
+							<StatsSkeleton title="Photoshop" progress={<Stats width="w-[54%]"/>} />
+							<StatsSkeleton title="2D Animation" progress={<Stats width="w-[20%]"/>} />
+							<StatsSkeleton title="3D Animation" progress={<Stats width="w-[30%]"/>} />
+							<StatsSkeleton title="Drawing" progress={<Stats width="w-[70%]"/>} />
 						</div>
 					} />
 				</div>
