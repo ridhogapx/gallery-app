@@ -1,11 +1,15 @@
 import Transition from "../components/Transition"
 import Ilustration from "../components/Ilustration"
 
-const IlustrationPage = () => {
+const IlustrationPage = (props) => {
+    const { visibility } = props
+
     return (
         <Transition children={
             <div className="pt-5">
-                <Ilustration />
+                {visibility &&
+                    <Ilustration />
+                }
             </div>
         }/>
     )
