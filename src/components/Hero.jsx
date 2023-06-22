@@ -12,13 +12,13 @@ const Hero = () => {
 						</>
 					} />
 					<Card title="Skills" children={
-						<>
+						<div className="mt-2">
 							<Stats title="3D Modelling" width="w-[65%]" />
 							<Stats title="Photoshop" width="w-[54%]"/>
 							<Stats title="2D Animation" width="w-[20%]"/>
 							<Stats title="3D Animation" width="w-[30%]"/>
 							<Stats title="Drawing" width="w-[70%]"/>
-						</>
+						</div>
 					} />
 				</div>
     )
