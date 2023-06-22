@@ -73,7 +73,7 @@ function App() {
     }, [location, currentLocation])
 
     return (
-      <div className="font-main overflow-hidden">
+      <div className="font-main max-w-screen overflow-hidden">
        <Navbar handler={toggleMenu} hamburger={hamburger}/>
        <ExtraMenu styleMenu={styleMenu} styleLink={styleLink}/>
        
