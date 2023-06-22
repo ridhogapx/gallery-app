@@ -1,11 +1,15 @@
 import Transition from "../components/Transition"
 import Concept from "../components/Concept"
 
-const ConceptPage = () => {
+const ConceptPage = (props) => {
+    const { visibility } = props
+
     return (
        <Transition children={
         <div className="pt-5">
-            <Concept />
+            {visibility &&
+                 <Concept />
+            }
         </div>
        }/>
        
