@@ -6,13 +6,6 @@ import ConceptPage from "./pages/ConceptPage"
 import Navbar from "./components/Navbar"
 import ExtraMenu from "./components/ExtraMenu"
 import IlustrationPage from "./pages/IlustrationPage"
-/*
-Todo:
-1. Fix responsive (Done)
-2. Navbar Desktop (Done)
-2. Router
-
- */
 
 function App() {
     const location = useLocation()
