@@ -6,6 +6,7 @@ import ConceptPage from "./pages/ConceptPage"
 import Navbar from "./components/Navbar"
 import ExtraMenu from "./components/ExtraMenu"
 import IlustrationPage from "./pages/IlustrationPage"
+import PersonalPage from "./pages/PersonalPage"
 
 function App() {
     const location = useLocation()
@@ -80,7 +81,8 @@ function App() {
               <Route index element={<HomePage visibility={visibilityContent}/>} />
               <Route path="/concept" element={<ConceptPage visibility={visibilityContent} />} />
               <Route path="/ilustration" element={<IlustrationPage visibility={visibilityContent}/>} />
-          </Routes>
+			  <Route path="/personal" element={<PersonalPage visibility={visibilityContent} />}  />
+		  </Routes>
         </AnimatePresence>
 
         
