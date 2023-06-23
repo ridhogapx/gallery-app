@@ -49,7 +49,7 @@ function App() {
   }
 
     useEffect(() => {
-        if(location !== currentLocation) {
+        if(currentLocation !== location ) {
           setCurrentLocation(location)
           setHumberger(previous => {
 	          return previous.replace("cross", " ")
@@ -83,7 +83,7 @@ function App() {
               <Route path="/concept" element={<ConceptPage visibility={visibilityContent} />} />
               <Route path="/ilustration" element={<IlustrationPage visibility={visibilityContent}/>} />
 			  <Route path="/personal" element={<PersonalPage visibility={visibilityContent} />}  />
-			  <Route path="/contact" element={<ContactPage />} />
+			  <Route path="/contact" element={<ContactPage visibility={visibilityContent} />} />
 		  </Routes>
         </AnimatePresence>
        </div>
