@@ -8,74 +8,55 @@ import ExtraMenu from "./components/ExtraMenu"
 import IlustrationPage from "./pages/IlustrationPage"
 import PersonalPage from "./pages/PersonalPage"
 import ContactPage from "./pages/ContactPage"
+ 
+/*
+Todo:
+1. Refactor Code
+
+*/
+
 
 function App() {
     const location = useLocation()
-
-     // Location state
-     const [currentLocation, setCurrentLocation] = useState(location)
    
-    // Styling state (is mess up as hell!!)
-    const [hamburger, setHumberger] = useState("block mx-4 transition ease-in-out my-2 px-6 h-0.5 bg-slate-600")
-  	const [styleMenu, setStyleMenu] = useState("overflow-hidden flex flex-col gap-y-16 h-0 justify-center items-center lg:hidden")
-  	const [styleLink, setStyleLink] = useState("transition ease-in duration-300 text-2xl font-bold opacity-0 lg:hidden");
-  	const [visibilityContent, setVisibilityContent] = useState(true);
-
-    const toggleMenu = () => {
-	    if(hamburger.includes("cross")) {
-	        setHumberger(previous => {
-	          return previous.replace("cross", " ")
-	        })
-	        setStyleMenu(previous => {
-	          return previous.replace("h-screen", "h-0")
-	        })
-	        setStyleLink(previous => {
-	          return previous.concat(" ", "opacity-0")
-	        })
-	        setVisibilityContent(true);
-	    } else {
-	        setHumberger(previous => {
-	         return previous.concat(" ", "cross")
-	        })
-	        setStyleMenu(previous => {
-	          return previous.replace("h-0", "h-screen")
-	        })
-	        setStyleLink(previous => {
-	          return previous.replace("opacity-0", " ")
-	        })
-	        setVisibilityContent(false)
-	    }
-    
-  }
+	const [visibilityContent, setVisibilityContent] = useState(true);
+	const [mobileNav, setMobileNav] = useState()
+	const [hamburger, setHamburger] = useState()
 
     useEffect(() => {
-        if(currentLocation !== location ) {
-          setHumberger(previous => {
-	          return previous.replace("cross", " ")
-	        })
-	        setStyleMenu(previous => {
-	          return previous.replace("h-screen", "h-0")
-	        })
-	        setStyleLink(previous => {
-	          return previous.concat(" ", "opacity-0")
-	        })
-	        setVisibilityContent(true)
-			setCurrentLocation(location)
-        }
+		  
+		  setVisibilityContent(true)
+    }, [location])
 
-        window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
-          if(e.matches) {
-            setVisibilityContent(true);
-          }
-        })
+	useEffect(() => {
+		window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
+			if(e.matches) {
+			  setVisibilityContent(true);
+			}
+		  })
+		const elNav = document.querySelector("#mobile-nav").children
+		const ham = document.querySelector("#ham").children
 
+		setMobileNav(elNav)
+		setHamburger(ham)
+	},[])
 
-    }, [location, currentLocation])
+	const toggleMenu = () => {
+		if(!hamburger[0].classList.contains("cross"))
+
+			for(let i = 0; i < mobileNav.length; i++) {
+				console.log(mobileNav[i])
+			}
+			
+			for(let i = 0; i < hamburger.length; i++) {
+				hamburger[i].classList.toggle("cross")
+			}
+	}
 
     return (
       <div className="font-main max-w-screen overflow-hidden">
-       <Navbar handler={toggleMenu} hamburger={hamburger}/>
-       <ExtraMenu styleMenu={styleMenu} styleLink={styleLink}/>
+       <Navbar handler={toggleMenu} />
+       <ExtraMenu />
        
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>
