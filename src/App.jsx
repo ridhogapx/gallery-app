@@ -44,7 +44,7 @@ function App() {
 			for(let i = 0; i < hamburger.length; i++) {
 				hamburger[i].classList.toggle("cross")
 			}
-		}
+		} 
 
 		setVisibilityContent(true)
     }, [location])
@@ -70,7 +70,9 @@ function App() {
 			hamContainer.classList.toggle("h-screen")
 
 			for(let i = 0; i < mobileNav.length; i++) {
-				mobileNav[i].classList.toggle("opacity-0")
+				if(mobileNav[i].classList.contains("opacity-0")) {
+					mobileNav[i].classList.toggle("opacity-0")
+				}
 			}
 			
 			for(let i = 0; i < hamburger.length; i++) {
