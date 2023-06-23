@@ -47,22 +47,7 @@ function App() {
 		} 
 
 		setVisibilityContent(true)
-    }, [location])
-
-	useEffect(() => {
-		window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
-			if(e.matches) {
-			  setVisibilityContent((current) => !current);
-			}
-		  })
-		const elNav = document.querySelector("#mobile-nav").children
-		const navContainer = document.querySelector("#mobile-nav")
-		const ham = document.querySelector("#ham").children
-
-		setMobileNav(elNav)
-		setHamburger(ham)
-		setHamContainer(navContainer)
-	},[])
+    }, [location.pathname])
 
 	const toggleMenu = () => {
 			setVisibilityContent((current) => !current)
@@ -88,7 +73,7 @@ function App() {
        
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>
-              <Route index element={<HomePage visibility={visibilityContent}/>} />
+              <Route path="/" element={<HomePage visibility={visibilityContent}/>} />
               <Route path="/concept" element={<ConceptPage visibility={visibilityContent} />} />
               <Route path="/ilustration" element={<IlustrationPage visibility={visibilityContent}/>} />
 			  <Route path="/personal" element={<PersonalPage visibility={visibilityContent} />}  />
