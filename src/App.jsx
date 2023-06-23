@@ -21,36 +21,62 @@ function App() {
    
 	const [visibilityContent, setVisibilityContent] = useState(true);
 	const [mobileNav, setMobileNav] = useState()
+	const [hamContainer, setHamContainer] = useState()
 	const [hamburger, setHamburger] = useState()
 
     useEffect(() => {
-		  
-		  setVisibilityContent(true)
-    }, [location])
-
-	useEffect(() => {
-		window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
-			if(e.matches) {
-			  setVisibilityContent(true);
-			}
-		  })
 		const elNav = document.querySelector("#mobile-nav").children
+		const navContainer = document.querySelector("#mobile-nav")
 		const ham = document.querySelector("#ham").children
 
 		setMobileNav(elNav)
 		setHamburger(ham)
-	},[])
+		setHamContainer(navContainer)
 
-	const toggleMenu = () => {
-		if(!hamburger[0].classList.contains("cross"))
+		if(mobileNav !== undefined) {
+			hamContainer.classList.toggle("h-0")
+			hamContainer.classList.toggle("h-screen")
 
 			for(let i = 0; i < mobileNav.length; i++) {
-				console.log(mobileNav[i])
+				mobileNav[i].classList.toggle("opacity-0")
 			}
 			
 			for(let i = 0; i < hamburger.length; i++) {
 				hamburger[i].classList.toggle("cross")
 			}
+		}
+
+		setVisibilityContent(true)
+    }, [location])
+
+	useEffect(() => {
+		window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
+			if(e.matches) {
+			  setVisibilityContent((current) => !current);
+			}
+		  })
+		const elNav = document.querySelector("#mobile-nav").children
+		const navContainer = document.querySelector("#mobile-nav")
+		const ham = document.querySelector("#ham").children
+
+		setMobileNav(elNav)
+		setHamburger(ham)
+		setHamContainer(navContainer)
+	},[])
+
+	const toggleMenu = () => {
+			setVisibilityContent((current) => !current)
+			hamContainer.classList.toggle("h-0")
+			hamContainer.classList.toggle("h-screen")
+
+			for(let i = 0; i < mobileNav.length; i++) {
+				mobileNav[i].classList.toggle("opacity-0")
+			}
+			
+			for(let i = 0; i < hamburger.length; i++) {
+				hamburger[i].classList.toggle("cross")
+			}
+		
 	}
 
     return (
