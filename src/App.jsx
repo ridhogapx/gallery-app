@@ -50,7 +50,6 @@ function App() {
 
     useEffect(() => {
         if(currentLocation !== location ) {
-          setCurrentLocation(location)
           setHumberger(previous => {
 	          return previous.replace("cross", " ")
 	        })
@@ -61,6 +60,7 @@ function App() {
 	          return previous.concat(" ", "opacity-0")
 	        })
 	        setVisibilityContent(true)
+			setCurrentLocation(location)
         }
 
         window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
