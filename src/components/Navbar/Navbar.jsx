@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import icon from "../assets/pls.png"
+import icon from "../../assets/pls.png"
 
 const Navbar = (props) => {
     const { handler } = props

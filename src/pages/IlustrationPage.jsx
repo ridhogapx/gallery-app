@@ -1,5 +1,5 @@
 import Transition from "../components/Effect/Transition"
-import Ilustration from "../components/Ilustration"
+import Ilustration from "../components/Common/Ilustration"
 
 const IlustrationPage = (props) => {
     const { visibility } = props

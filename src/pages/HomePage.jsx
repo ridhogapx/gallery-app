@@ -1,9 +1,9 @@
-import Hero from "../components/Hero"
+import Hero from "../components/Common/Hero"
 import Transition from "../components/Effect/Transition"
-import Concept from "../components/Concept"
-import Ilustration from "../components/Ilustration"
-import Personal from "../components/Personal"
-import Footer from "../components/Footer"
+import Concept from "../components/Common/Concept"
+import Ilustration from "../components/Common/Ilustration"
+import Personal from "../components/Common/Personal"
+import Footer from "../components/Common/Footer"
 
 
 const HomePage = (props) => {

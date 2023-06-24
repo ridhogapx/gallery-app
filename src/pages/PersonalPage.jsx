@@ -1,5 +1,5 @@
 import Transition from "../components/Effect/Transition"
-import Personal from "../components/Personal"
+import Personal from "../components/Common/Personal"
 
 const PersonalPage = (props) => {
     const { visibility } = props

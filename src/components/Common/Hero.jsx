@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import Card from "./Card"
-import Stats from "./Stats/Stats"
-import StatsSkeleton from "./Stats/StatsSkeleton"
+import Stats from "../Stats/Stats"
+import StatsSkeleton from "../Stats/StatsSkeleton"
 
 const Hero = () => {
     return(

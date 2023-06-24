@@ -1,7 +1,7 @@
 import Section from "./Section";
-import first from "../assets/ilustration/1.jpg"
-import second from "../assets/ilustration/2.jpg"
-import third from "../assets/ilustration/3.jpg"
+import first from "../../assets/ilustration/1.jpg"
+import second from "../../assets/ilustration/2.jpg"
+import third from "../../assets/ilustration/3.jpg"
 
 const Ilustration = () => {
     const content = [

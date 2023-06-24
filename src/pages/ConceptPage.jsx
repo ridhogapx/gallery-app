@@ -1,5 +1,5 @@
 import Transition from "../components/Effect/Transition"
-import Concept from "../components/Concept"
+import Concept from "../components/Common/Concept"
 
 const ConceptPage = (props) => {
     const { visibility } = props
