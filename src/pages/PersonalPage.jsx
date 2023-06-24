@@ -1,4 +1,4 @@
-import Transition from "../components/Transition"
+import Transition from "../components/Effect/Transition"
 import Personal from "../components/Personal"
 
 const PersonalPage = (props) => {

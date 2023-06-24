@@ -1,4 +1,4 @@
-import Transition from "../components/Transition"
+import Transition from "../components/Effect/Transition"
 import Sosmed from "../components/Sosmed"
 const ContactPage = (props) => {
     const { visibility } = props

@@ -1,4 +1,4 @@
-import Transition from "../components/Transition"
+import Transition from "../components/Effect/Transition"
 import Ilustration from "../components/Ilustration"
 
 const IlustrationPage = (props) => {

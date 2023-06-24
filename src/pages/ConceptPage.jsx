@@ -1,4 +1,4 @@
-import Transition from "../components/Transition"
+import Transition from "../components/Effect/Transition"
 import Concept from "../components/Concept"
 
 const ConceptPage = (props) => {

@@ -1,5 +1,5 @@
 import Hero from "../components/Hero"
-import Transition from "../components/Transition"
+import Transition from "../components/Effect/Transition"
 import Concept from "../components/Concept"
 import Ilustration from "../components/Ilustration"
 import Personal from "../components/Personal"
