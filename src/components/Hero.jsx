@@ -11,8 +11,8 @@ const Hero = () => {
 							<p className="text-base mt-2 tracking-wide text-slate-400">
 								Hi! My name is Gions Freekley. Passionate student who love 2D and 3D things, such as Animation, Ilustration, Character Design, and 3D Modelling. I like to keep learning those things as i want to improve my own arts! 
 							</p>
-							<div className="navMenu">
-								<NavLink to="/contact" className="mt-4 w-[200px]  px-10 py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white transition ease-in-out text-base hover:opacity-70">Contact</NavLink>
+							<div className="navMenu block">
+								<NavLink to="/contact" className="mt-4 block w-[200px]  px-10 py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white transition ease-in-out text-base hover:opacity-70">Contact</NavLink>
 							</div>
 						</div>
 					} />
