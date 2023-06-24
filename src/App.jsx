@@ -21,20 +21,31 @@ function App() {
     const location = useLocation()
    
 	const [visibilityContent, setVisibilityContent] = useState(true);
-	const [mobileNav, setMobileNav] = useState()
 	const [hamContainer, setHamContainer] = useState()
 	const [hamburger, setHamburger] = useState()
 
     useEffect(() => {
-		const elNav = document.querySelector("#mobile-nav").children
 		const navContainer = document.querySelector("#mobile-nav")
 		const ham = document.querySelector("#ham").children
 
-		setMobileNav(elNav)
 		setHamburger(ham)
 		setHamContainer(navContainer)
 
     }, [])
+
+	useEffect(() => {
+		if(hamContainer !== undefined) {
+			if(hamContainer.classList.contains("h-screen")) {
+				hamContainer.classList.remove("h-screen")
+				hamContainer.classList.add("h-0")
+				setVisibilityContent(true)
+
+				for(let i = 0; i < hamburger.length; i++) {
+					hamburger[i].classList.toggle("cross")
+				}
+			}
+		}
+	}, [location])
 
 	const toggleMenu = () => {
 		for(let i = 0; i < hamburger.length; i++) {
@@ -44,7 +55,6 @@ function App() {
 
 		hamContainer.classList.toggle("h-0")
 		hamContainer.classList.toggle("h-screen")
-
 			
 		
 	}
