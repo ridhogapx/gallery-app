@@ -12,7 +12,8 @@ import ContactPage from "./pages/ContactPage"
 /*
 Todo:
 1. Refactor Code
-
+2. Fix bug navbar
+3. Plan: Toggle should be implement only on ham button
 */
 
 
@@ -33,36 +34,18 @@ function App() {
 		setHamburger(ham)
 		setHamContainer(navContainer)
 
-		if(mobileNav !== undefined) {
-			hamContainer.classList.toggle("h-0")
-			hamContainer.classList.toggle("h-screen")
-
-			for(let i = 0; i < mobileNav.length; i++) {
-				mobileNav[i].classList.toggle("opacity-0")
-			}
-			
-			for(let i = 0; i < hamburger.length; i++) {
-				hamburger[i].classList.toggle("cross")
-			}
-		} 
-
-		setVisibilityContent(true)
-    }, [location.pathname])
+    }, [])
 
 	const toggleMenu = () => {
-			setVisibilityContent((current) => !current)
-			hamContainer.classList.toggle("h-0")
-			hamContainer.classList.toggle("h-screen")
+		for(let i = 0; i < hamburger.length; i++) {
+			hamburger[i].classList.toggle("cross")
+		}
+		setVisibilityContent((current) => !current)
 
-			for(let i = 0; i < mobileNav.length; i++) {
-				if(mobileNav[i].classList.contains("opacity-0")) {
-					mobileNav[i].classList.toggle("opacity-0")
-				}
-			}
+		hamContainer.classList.toggle("h-0")
+		hamContainer.classList.toggle("h-screen")
+
 			
-			for(let i = 0; i < hamburger.length; i++) {
-				hamburger[i].classList.toggle("cross")
-			}
 		
 	}
 
