@@ -9,13 +9,6 @@ import IlustrationPage from "./pages/IlustrationPage"
 import PersonalPage from "./pages/PersonalPage"
 import ContactPage from "./pages/ContactPage"
  
-/*
-Todo:
-1. Refactor Code
-2. Fix bug navbar
-3. Plan: Toggle should be implement only on ham button
-*/
-
 
 function App() {
     const location = useLocation()
